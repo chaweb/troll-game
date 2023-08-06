@@ -32,6 +32,22 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     ['@nuxtjs/color-mode', {classSuffix: ''}],
+    ['~/assets/nuxt-breakpoints', { 
+          // phone
+      sm: 600, 
+            // medium tablet
+      md: 960, 
+            // large tablette or laptop
+      lg: 1264, 
+            // Desktop
+      xl: 1904,
+            // télévision 4k
+      options: {
+      polyfill: true,
+      throttle: 200,
+      orientationDefault: false,
+      viewPort: "html"
+      } }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,7 +59,7 @@ export default {
         { // At least one entry is required
           name: 'default',
           default: true,
-          vuex: { actions: ["game"] },
+          vuex: { actions: ["newGame", "refreshGame"] },
           namespaces: { /* see section below */ }
         },  
       ]

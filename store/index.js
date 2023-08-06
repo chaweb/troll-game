@@ -1,3 +1,9 @@
 export const state = () => ({
-    anyValues: 0
+    pass: false
 })
+
+export const mutations = {
+    pass(state) {
+      state.pass = !state.pass
+    },
+}  

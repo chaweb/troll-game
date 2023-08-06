@@ -62,23 +62,23 @@
     display: flex
     @if ($pos == 'center')
         justify-content: center
-        align-content: center
+        align-items: center
         
     @if ($pos == 'top')
         justify-content: center
-        align-content: flex-start
+        align-items: flex-start
         
     @if ($pos == 'bottom')
         justify-content: center
-        align-content: end
+        align-items: flex-end
         
     @if ($pos == 'left')
-        justify-content: start
-        align-content: center
+        justify-content: flex-start
+        align-items: center
         
     @if ($pos == 'right')
-        justify-content: end
-        align-content: center
+        justify-content: flex-end
+        align-items: center
     
 
 //margin
